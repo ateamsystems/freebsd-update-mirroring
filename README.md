@@ -20,7 +20,7 @@ This option -m can be used together with following option:
 -d workdir   -- Store working files in workdir
 </pre>
 
-In order to run freebsd-update using -d, -m option, we need to create working directory first:
+In order to run freebsd-update-mirror using -d, -m option, we need to create working directory first:
 
 <pre>
 mkdir 2023Q1
@@ -29,10 +29,10 @@ mkdir 2023Q1
 This directory then can be used in nginx or apache web servers to serve other FreeBSD servers.
 
 
-Then sample command can be run using "freebsd-update fetch" command like:
+Then sample command can be run using "freebsd-update-mirror fetch" command like:
 
 <pre>
-./freebsd-update fetch -d 2023Q1 --currently-running 13.1-RELEASE -m
+./freebsd-update-mirror fetch -d 2023Q1 --currently-running 13.1-RELEASE -m
 </pre>
 
 So above command assumes it is running on 13.1-RELEASE and will store FreeBSD update related files 
@@ -150,10 +150,10 @@ etc.
 
 ## FreeBSD update from cron
 
-If freebsd-update command needs to be run from cron, then it can be run like:
+If freebsd-update-mirror command needs to be run from cron, then it can be run like:
 
 <pre>
-./freebsd-update cron -d 2023Q1 --currently-running 13.0-RELEASE -m
+./freebsd-update-mirror cron -d 2023Q1 --currently-running 13.0-RELEASE -m
 </pre>
 
 The cron command of freebsd-update is described in freebsd-update manual page as:
