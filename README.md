@@ -125,7 +125,7 @@ It should show 13.1-RELEASE directory.
 
 ##	Using freebsd-update from other FreeBSD servers
 
-Once nginx configuration is done and working we can change the ServerName of /etc/freebsd-update.conf file using our nginx server IP:
+Once nginx configuration is done and working we can change the ServerName of /etc/freebsd-update.conf file using nginx server IP, for instance:
 
 <pre>
 ServerName 192.168.1.8
