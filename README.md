@@ -1,20 +1,33 @@
 # FreeBSD Update Mirroring
 
-This document describes about how to do fetch and place FreeBSD OS update related files so that to use them later 
-when using freebsd-update script from other FreeBSD servers.
+Many FreeBSD users and system administrators have to manage multiple machines or environments.
+They face various challenges and demands when they need to keep their infrastructure updated with the latest security and software patches.
+A FreeBSD Update Server can simplify this process by allowing them to test the updates on some machines before applying them to the rest of the network. 
+It also means they can update their systems faster from a local network instead of a slower Internet connection.
 
+This document describes about how to fetch and place FreeBSD OS update related files and patches and use them later 
+when using freebsd-update script from other FreeBSD servers.
 
 ##	Using modified freebsd-update script
 
-It is heavily based on freebsd-update script.
+To set up a FreeBSD update server, you need to use a modified version of the freebsd-update script. 
+We have called this script freebsd-update-mirror to avoid confusion. It is heavily based on freebsd-update script.
+This script downloads and stores the FreeBSD update patches and files in a specific directory.
+One of the important options freebsd-update script that can be used with freebsd-update-mirror:
 
-So following option related changes are added to freebsd-update script:
+<pre>
+--currently-running release
+</pre>
+
+This option is very useful when fetching necessary patches and files assuming that the system is running the specified release.
+
+In addition to it, the following option related changes are added to freebsd-update script:
 
 <pre>
 -m           -- Mirror mode, download files
 </pre>
 
-This option -m can be used together with following option:
+This option -m can be used together with the following option:
 
 <pre>
 -d workdir   -- Store working files in workdir
