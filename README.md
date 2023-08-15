@@ -13,6 +13,7 @@ when using freebsd-update script from other FreeBSD servers.
 To set up a FreeBSD update server, you need to use a modified version of the freebsd-update script. 
 We have called this script freebsd-update-mirror to avoid confusion. It is heavily based on freebsd-update script.
 This script downloads and stores the FreeBSD update patches and files in a specific directory.
+
 One of the important options freebsd-update script that can be used with freebsd-update-mirror:
 
 <pre>
